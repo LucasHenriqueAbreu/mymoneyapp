@@ -1,0 +1,59 @@
+{
+  "name": "lancamento",
+  "plural": "lancamentos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "valor": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "datavencimento": {
+      "type": "date",
+      "required": true
+    },
+    "tipo": {
+      "type": "string",
+      "required": true
+    },
+    "repetir": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "fixo": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "parcelado": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "mesini": {
+      "type": "number",
+      "default": 0
+    },
+    "mesfim": {
+      "type": "number"
+    },
+    "descricao": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "id": {
+      "type": "hasOne",
+      "model": "categoria",
+      "foreignKey": "categoria"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

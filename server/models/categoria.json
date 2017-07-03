@@ -1,0 +1,25 @@
+{
+  "name": "categoria",
+  "plural": "categorias",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "descricao": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "id": {
+      "type": "hasOne",
+      "model": "user",
+      "foreignKey": "user"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
